@@ -2,7 +2,7 @@
 
 Modern web teknolojileri ile geliştirilmiş, eğitici içerikli tam özellikli bir labirent oyunudur. Quiz soruları, İngilizce cümle tamamlama ve CAPTCHA doğrulama gibi interaktif öğelerle öğrenmeyi oyunlaştırmayı hedefler.
 
-🔗 **Canlı Demo:** [Vercel linkini buraya ekle]
+🔗 **Canlı Demo:** [mazer-gules.vercel.app]
 
 ---
 
