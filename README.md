@@ -46,7 +46,10 @@ Modern web teknolojileri ile geliştirilmiş, eğitici içerikli tam özellikli 
 ---
 🧩 Hücre Değerleri Referans Tablosu
 Labirent matrisindeki her bir rakam farklı bir objeyi temsil eder:
+
 <img width="512" height="242" alt="image" src="https://github.com/user-attachments/assets/ace3054b-f45e-4c55-a99e-2de8e0f12f13" />
+
+
 ---
 🎨 Labirent Oluşturucu (Maze Editor)
 Kullanıcıların kendi labirentlerini oluşturması için tam özellikli editör:
@@ -70,32 +73,6 @@ Doğrulama Sistemi - Başlangıç/çıkış kontrolü, geçerlilik testi
 
 <img width="1488" height="787" alt="image" src="https://github.com/user-attachments/assets/19bc8112-5495-460d-8473-ae6074ad5047" />
 
-Teknik Detaylar:
-
-typescript
-// Hücre tıklama ile tip değiştirme
-const handleCellClick = (x: number, y: number) => {
-  const currentValue = matrix[y][x];
-  const nextValue = (currentValue + 1) % 10; // 0-9 arası döngü
-  updateMatrix(x, y, nextValue);
-};
-// Düşman rotası oluşturma
-const addEnemyWaypoint = (x: number, y: number) => {
-  setEnemies(prev => [...prev, {
-    id: `enemy-${Date.now()}`,
-    path: [{ x, y }]
-  }]);
-};
-// Firebase'e kaydetme
-const saveToCloud = async () => {
-  const mazeData = {
-    name: mazeName,
-    json: JSON.stringify({ width, height, matrix, doors, enemies }),
-    userId: user.uid,
-    createdAt: serverTimestamp()
-  };
-  await addDoc(collection(db, 'mazes'), mazeData);
-};
 
 ## 🎯 Teknik Detaylar
 
