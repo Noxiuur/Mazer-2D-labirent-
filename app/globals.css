@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #020617; /* koyu temada arka plan */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    conic-gradient(
+      from 180deg at 50% 50%,
+      rgba(56, 189, 248, 0.18),
+      rgba(129, 140, 248, 0.1),
+      rgba(236, 72, 153, 0.16),
+      rgba(45, 212, 191, 0.14),
+      rgba(56, 189, 248, 0.18)
+    );
+  filter: blur(90px);
+  opacity: 0.55;
+  /* Animasyon yok, sabit aura */
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Yol ve duvar renklerini aydınlık tema için yeniden tanımla */
+.theme-light {
+  background-color: #94a3b8; /* Arka planı grileştir (slate-400) - göz almaması için */
+  color: #0f172a; /* Ana metin rengi koyu (slate-900) */
+}
+
+.theme-light::before,
+.theme-light::after {
+  display: none; /* açık temada arka plan efektlerini kapat */
+}
+
+/* Oyun içi renkler aynı kalsın (oyun alanı) */
+.theme-light .bg-surface-base {
+  background-color: #f8fafc !important; /* Oyun zemini çok açık gri/beyaz */
+}
+
+.theme-light .bg-surface-base\/50 {
+  background-color: rgba(248, 250, 252, 0.8) !important;
+}
+
+.theme-light .bg-surface-raised {
+  background-color: #1e293b !important; /* Duvarlar koyu slate */
+}
+
+/* 
+   Sağ paneldeki butonlar ve kartlar için (bg-white/5, bg-white/10 vb.) 
+   Açık temada gri arka plan üzerinde görünür olmaları için "Yarı saydam BEYAZ" yapıyoruz.
+   Böylece "glass" efekti oluşur.
+*/
+.theme-light .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.theme-light .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+.theme-light .hover\:bg-white\/10:hover {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+.theme-light .hover\:bg-white\/20:hover {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Kenarlıklar belirgin olsun */
+.theme-light .border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Metinler: Arka plan açık veya yarı saydam beyaz olduğu için KOYU renk olmalı */
+.theme-light .text-white {
+  color: #0f172a !important; /* slate-900 */
+}
+.theme-light .text-white\/70,
+.theme-light .text-white\/60,
+.theme-light .text-white\/50,
+.theme-light .text-white\/80 {
+  color: #334155 !important; /* slate-700 - Biraz daha yumuşak koyu */
+}
+.theme-light .text-white\/40,
+.theme-light .text-white\/30 {
+  color: #475569 !important; /* slate-600 */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(94, 234, 212, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 85% 85%, rgba(129, 140, 248, 0.22) 0%, transparent 55%),
+    linear-gradient(
+      120deg,
+      rgba(15, 23, 42, 0.0) 0%,
+      rgba(15, 23, 42, 0.85) 40%,
+      rgba(15, 23, 42, 0.85) 60%,
+      rgba(15, 23, 42, 0.0) 100%
+    );
+  mix-blend-mode: normal;
+  opacity: 0.95;
+  /* Animasyon yok, sabit katman */
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* rotateAura ve diagonalSweep artık kullanılmıyor, ancak
+   gelecekte tekrar animasyon eklemek istersen diye bırakıyoruz. */
+
+.neon-border {
+  border: 1px solid rgba(94, 224, 255, 0.4);
+  box-shadow: 0 0 12px rgba(94, 224, 255, 0.3);
+}
+
+.grid-tile {
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+
