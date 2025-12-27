@@ -44,6 +44,10 @@ Modern web teknolojileri ile geliştirilmiş, eğitici içerikli tam özellikli 
 - **Dil & Tema:** Çift dil (TR/EN) desteği ve koyu/açık mod.
 
 ---
+🧩 Hücre Değerleri Referans Tablosu
+Labirent matrisindeki her bir rakam farklı bir objeyi temsil eder:
+<img width="512" height="242" alt="image" src="https://github.com/user-attachments/assets/ace3054b-f45e-4c55-a99e-2de8e0f12f13" />
+
 
 ## 🎯 Teknik Detaylar
 
