@@ -1,6 +1,6 @@
 # 🎮 Mazer - 2D Eğitici Labirent Oyunu
 
-Modern web teknolojileri ile geliştirilmiş, eğitici içerikli tam özellikli bir labirent oyunudur. Quiz soruları, İngilizce cümle tamamlama ve CAPTCHA doğrulama gibi interaktif öğelerle öğrenmeyi oyunlaştırmayı hedefler.
+Modern web teknolojileri ile geliştirilmiş, eğitici içerikli tam özellikli bir labirent oyunudur. Quiz soruları, İngilizce cümle tamamlama gibi interaktif öğelerle öğrenmeyi oyunlaştırmayı hedefler.
 
 🔗 **Canlı Demo:** [mazer-gules.vercel.app]
 
@@ -28,7 +28,7 @@ Modern web teknolojileri ile geliştirilmiş, eğitici içerikli tam özellikli 
 - **Pixel-Perfect Collision Detection:** Matris tabanlı hassas çarpışma sistemi.
 - **Smooth Movement:** İvme ve sürtünme tabanlı fizik motoru ile akıcı karakter kontrolü.
 - **Düşman AI:** Patrol algoritması ile belirli yolları izleyen (waypoint) yapay zeka.
-- **Eğitici İçerik:** Oyun içine entegre edilmiş Quiz, İngilizce cümle ve CAPTCHA bölümleri.
+- **Eğitici İçerik:** Oyun içine entegre edilmiş Quiz, İngilizce cümle .
 - **Gerçek Zamanlı Liderlik Tablosu:** Firebase ile anlık güncellenen skorboard.
 
 ### **Kontrol Sistemleri**
@@ -59,7 +59,7 @@ Kullanıcıların kendi labirentlerini oluşturması için tam özellikli editö
 40x40 Grid Sistemi - Drag-and-drop ile hücre düzenleme
 9 Farklı Hücre Tipi:
 Duvar, Yol, Başlangıç, Çıkış
-Tıklama Kapısı, Düşman, CAPTCHA Kapısı
+Tıklama Kapısı, Düşman, Doğrulama Kapısı
 Anahtar, Kilitli Çıkış, Yanar Duvar
 Düşman Rota Editörü - Waypoint ekleme/silme ile patrol rotası oluşturma
 Canlı Önizleme - Değişiklikleri anında görme
